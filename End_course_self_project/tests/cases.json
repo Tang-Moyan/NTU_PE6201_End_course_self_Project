@@ -1,0 +1,1695 @@
+{
+  "result_types": {
+    "exact": "User message equals the canonical quote text (character-for-character).",
+    "normalized": "Only casing, punctuation, or apostrophe style differs; normalized tokens match the quote.",
+    "variation": "Message uses a knowledge-base variation (often inside natural chat), not the canonical quote.",
+    "paraphrase": "Natural near wording that fuzzy-matches the quote but is not the quote or a listed variation.",
+    "embedded": "Full canonical quote appears naturally inside a longer chat message.",
+    "multi": "One coherent message uses two quotes from the same source work.",
+    "cross_source": "One coherent message uses quotes from at least two different works.",
+    "no_hit": "Everyday message with no retrievable quote overlap.",
+    "near_miss": "Thematic or lexical overlap without a valid quote match."
+  },
+  "cases": [
+    {
+      "id": "exact-001",
+      "result_type": "exact",
+      "text": "It takes a great deal of bravery to stand up your enemies but a great deal more to stand up to your friends.",
+      "expected_quotes": [
+        "It takes a great deal of bravery to stand up your enemies but a great deal more to stand up to your friends."
+      ]
+    },
+    {
+      "id": "exact-002",
+      "result_type": "exact",
+      "text": "It is not our abilities that show what we truly are. It is our choices.",
+      "expected_quotes": [
+        "It is not our abilities that show what we truly are. It is our choices."
+      ]
+    },
+    {
+      "id": "exact-003",
+      "result_type": "exact",
+      "text": "No spell can reawaken the dead, Harry.",
+      "expected_quotes": [
+        "No spell can reawaken the dead, Harry."
+      ]
+    },
+    {
+      "id": "exact-004",
+      "result_type": "exact",
+      "text": "Forgive my mawkishness, Harry. I'm an old man.",
+      "expected_quotes": [
+        "Forgive my mawkishness, Harry. I'm an old man."
+      ]
+    },
+    {
+      "id": "exact-005",
+      "result_type": "exact",
+      "text": "Once again, I must ask too much of you, Harry.",
+      "expected_quotes": [
+        "Once again, I must ask too much of you, Harry."
+      ]
+    },
+    {
+      "id": "exact-006",
+      "result_type": "exact",
+      "text": "He'll never be gone. Not as long as those who remain are loyal to him.",
+      "expected_quotes": [
+        "He'll never be gone. Not as long as those who remain are loyal to him."
+      ]
+    },
+    {
+      "id": "exact-007",
+      "result_type": "exact",
+      "text": "We're gonna make them proud, Neville. That's a promise.",
+      "expected_quotes": [
+        "We're gonna make them proud, Neville. That's a promise."
+      ]
+    },
+    {
+      "id": "exact-008",
+      "result_type": "exact",
+      "text": "Working hard is important, but there's something that matters even more: believing in yourself.",
+      "expected_quotes": [
+        "Working hard is important, but there's something that matters even more: believing in yourself."
+      ]
+    },
+    {
+      "id": "exact-009",
+      "result_type": "exact",
+      "text": "Morty, You're right. Town is bad. But that doesn't mean that we have to be.",
+      "expected_quotes": [
+        "Morty, You're right. Town is bad. But that doesn't mean that we have to be."
+      ]
+    },
+    {
+      "id": "exact-010",
+      "result_type": "exact",
+      "text": "But speeches are for campaigning. Now, is the time for action.",
+      "expected_quotes": [
+        "But speeches are for campaigning. Now, is the time for action."
+      ]
+    },
+    {
+      "id": "exact-011",
+      "result_type": "exact",
+      "text": "I thought the whole point of having a dog was to feel superior, Jerry?",
+      "expected_quotes": [
+        "I thought the whole point of having a dog was to feel superior, Jerry?"
+      ]
+    },
+    {
+      "id": "exact-012",
+      "result_type": "exact",
+      "text": "The universe is a crazy, chaotic place.",
+      "expected_quotes": [
+        "The universe is a crazy, chaotic place."
+      ]
+    },
+    {
+      "id": "exact-013",
+      "result_type": "exact",
+      "text": "Parents are just kids having kids.",
+      "expected_quotes": [
+        "Parents are just kids having kids."
+      ]
+    },
+    {
+      "id": "exact-014",
+      "result_type": "exact",
+      "text": "Our people will get more from the idea he represented than from the Jelly Bean he actually was.",
+      "expected_quotes": [
+        "Our people will get more from the idea he represented than from the Jelly Bean he actually was."
+      ]
+    },
+    {
+      "id": "exact-015",
+      "result_type": "exact",
+      "text": "Nobody exists on purpose, nobody belongs anywhere, everybody's gonna die, come watch TV.",
+      "expected_quotes": [
+        "Nobody exists on purpose, nobody belongs anywhere, everybody's gonna die, come watch TV."
+      ]
+    },
+    {
+      "id": "exact-016",
+      "result_type": "exact",
+      "text": "Scientifically, traditions are an idiot thing.",
+      "expected_quotes": [
+        "Scientifically, traditions are an idiot thing."
+      ]
+    },
+    {
+      "id": "exact-017",
+      "result_type": "exact",
+      "text": "Hobbits really are amazing creatures. You can learn all that there is to know about their ways in a month and yet, after a hundred years, they can still surprise you.",
+      "expected_quotes": [
+        "Hobbits really are amazing creatures. You can learn all that there is to know about their ways in a month and yet, after a hundred years, they can still surprise you."
+      ]
+    },
+    {
+      "id": "exact-018",
+      "result_type": "exact",
+      "text": "I have nothing greater to give than the gift you already bear.",
+      "expected_quotes": [
+        "I have nothing greater to give than the gift you already bear."
+      ]
+    },
+    {
+      "id": "exact-019",
+      "result_type": "exact",
+      "text": "A wizard is never late, Frodo Baggins. Nor is he early; he arrives precisely when he means to.",
+      "expected_quotes": [
+        "A wizard is never late, Frodo Baggins. Nor is he early; he arrives precisely when he means to."
+      ]
+    },
+    {
+      "id": "exact-020",
+      "result_type": "exact",
+      "text": "All we have to decide is what to do with the time that is given to us.",
+      "expected_quotes": [
+        "All we have to decide is what to do with the time that is given to us."
+      ]
+    },
+    {
+      "id": "exact-021",
+      "result_type": "exact",
+      "text": "One Ring to rule them all, One Ring to find them, One Ring to bring them all, and in the darkness bind them.",
+      "expected_quotes": [
+        "One Ring to rule them all, One Ring to find them, One Ring to bring them all, and in the darkness bind them."
+      ]
+    },
+    {
+      "id": "exact-022",
+      "result_type": "exact",
+      "text": "Even the smallest person can change the course of the future.",
+      "expected_quotes": [
+        "Even the smallest person can change the course of the future."
+      ]
+    },
+    {
+      "id": "exact-023",
+      "result_type": "exact",
+      "text": "You shall not pass.",
+      "expected_quotes": [
+        "You shall not pass."
+      ]
+    },
+    {
+      "id": "exact-024",
+      "result_type": "exact",
+      "text": "It is a strange fate that we should suffer so much fear and doubt over so small a thing.",
+      "expected_quotes": [
+        "It is a strange fate that we should suffer so much fear and doubt over so small a thing."
+      ]
+    },
+    {
+      "id": "normalized-025",
+      "result_type": "normalized",
+      "text": "IT TAKES A GREAT DEAL OF BRAVERY TO STAND UP YOUR ENEMIES BUT A GREAT DEAL MORE TO STAND UP TO YOUR FRIENDS.",
+      "expected_quotes": [
+        "It takes a great deal of bravery to stand up your enemies but a great deal more to stand up to your friends."
+      ]
+    },
+    {
+      "id": "normalized-026",
+      "result_type": "normalized",
+      "text": "it is not our abilities that show what we truly are. it is our choices.",
+      "expected_quotes": [
+        "It is not our abilities that show what we truly are. It is our choices."
+      ]
+    },
+    {
+      "id": "normalized-027",
+      "result_type": "normalized",
+      "text": "No spell can reawaken the dead, Harry!!!",
+      "expected_quotes": [
+        "No spell can reawaken the dead, Harry."
+      ]
+    },
+    {
+      "id": "normalized-028",
+      "result_type": "normalized",
+      "text": "Forgive my mawkishness, Harry. I’m an old man.",
+      "expected_quotes": [
+        "Forgive my mawkishness, Harry. I'm an old man."
+      ]
+    },
+    {
+      "id": "normalized-029",
+      "result_type": "normalized",
+      "text": "once again, i must ask too much of you, harry.",
+      "expected_quotes": [
+        "Once again, I must ask too much of you, Harry."
+      ]
+    },
+    {
+      "id": "normalized-030",
+      "result_type": "normalized",
+      "text": "He'll never be gone — not as long as those who remain are loyal to him.",
+      "expected_quotes": [
+        "He'll never be gone. Not as long as those who remain are loyal to him."
+      ]
+    },
+    {
+      "id": "normalized-031",
+      "result_type": "normalized",
+      "text": "WE'RE GONNA MAKE THEM PROUD, NEVILLE. THAT'S A PROMISE.",
+      "expected_quotes": [
+        "We're gonna make them proud, Neville. That's a promise."
+      ]
+    },
+    {
+      "id": "normalized-032",
+      "result_type": "normalized",
+      "text": "Working hard is important, but there's something that matters even more: believing in yourself!!!",
+      "expected_quotes": [
+        "Working hard is important, but there's something that matters even more: believing in yourself."
+      ]
+    },
+    {
+      "id": "normalized-033",
+      "result_type": "normalized",
+      "text": "MORTY, YOU'RE RIGHT. TOWN IS BAD. BUT THAT DOESN'T MEAN THAT WE HAVE TO BE.",
+      "expected_quotes": [
+        "Morty, You're right. Town is bad. But that doesn't mean that we have to be."
+      ]
+    },
+    {
+      "id": "normalized-034",
+      "result_type": "normalized",
+      "text": "But speeches are for campaigning. Now, is the time for action!!!",
+      "expected_quotes": [
+        "But speeches are for campaigning. Now, is the time for action."
+      ]
+    },
+    {
+      "id": "normalized-035",
+      "result_type": "normalized",
+      "text": "i thought the whole point of having a dog was to feel superior, jerry?",
+      "expected_quotes": [
+        "I thought the whole point of having a dog was to feel superior, Jerry?"
+      ]
+    },
+    {
+      "id": "normalized-036",
+      "result_type": "normalized",
+      "text": "The universe is a crazy, chaotic place!!!",
+      "expected_quotes": [
+        "The universe is a crazy, chaotic place."
+      ]
+    },
+    {
+      "id": "normalized-037",
+      "result_type": "normalized",
+      "text": "PARENTS ARE JUST KIDS HAVING KIDS.",
+      "expected_quotes": [
+        "Parents are just kids having kids."
+      ]
+    },
+    {
+      "id": "normalized-038",
+      "result_type": "normalized",
+      "text": "Our people will get more from the idea he represented than from the Jelly Bean he actually was!!!",
+      "expected_quotes": [
+        "Our people will get more from the idea he represented than from the Jelly Bean he actually was."
+      ]
+    },
+    {
+      "id": "normalized-039",
+      "result_type": "normalized",
+      "text": "nobody exists on purpose, nobody belongs anywhere, everybody's gonna die, come watch TV.",
+      "expected_quotes": [
+        "Nobody exists on purpose, nobody belongs anywhere, everybody's gonna die, come watch TV."
+      ]
+    },
+    {
+      "id": "normalized-040",
+      "result_type": "normalized",
+      "text": "SCIENTIFICALLY, TRADITIONS ARE AN IDIOT THING.",
+      "expected_quotes": [
+        "Scientifically, traditions are an idiot thing."
+      ]
+    },
+    {
+      "id": "normalized-041",
+      "result_type": "normalized",
+      "text": "hobbits really are amazing creatures. you can learn all that there is to know about their ways in a month and yet, after a hundred years, they can still surprise you.",
+      "expected_quotes": [
+        "Hobbits really are amazing creatures. You can learn all that there is to know about their ways in a month and yet, after a hundred years, they can still surprise you."
+      ]
+    },
+    {
+      "id": "normalized-042",
+      "result_type": "normalized",
+      "text": "I have nothing greater to give than the gift you already bear!!!",
+      "expected_quotes": [
+        "I have nothing greater to give than the gift you already bear."
+      ]
+    },
+    {
+      "id": "normalized-043",
+      "result_type": "normalized",
+      "text": "A wizard is never late, Frodo Baggins. Nor is he early; he arrives precisely when he means to!!!",
+      "expected_quotes": [
+        "A wizard is never late, Frodo Baggins. Nor is he early; he arrives precisely when he means to."
+      ]
+    },
+    {
+      "id": "normalized-044",
+      "result_type": "normalized",
+      "text": "ALL WE HAVE TO DECIDE IS WHAT TO DO WITH THE TIME THAT IS GIVEN TO US.",
+      "expected_quotes": [
+        "All we have to decide is what to do with the time that is given to us."
+      ]
+    },
+    {
+      "id": "normalized-045",
+      "result_type": "normalized",
+      "text": "ONE RING TO RULE THEM ALL, ONE RING TO FIND THEM, ONE RING TO BRING THEM ALL, AND IN THE DARKNESS BIND THEM.",
+      "expected_quotes": [
+        "One Ring to rule them all, One Ring to find them, One Ring to bring them all, and in the darkness bind them."
+      ]
+    },
+    {
+      "id": "normalized-046",
+      "result_type": "normalized",
+      "text": "even the smallest person can change the course of the future.",
+      "expected_quotes": [
+        "Even the smallest person can change the course of the future."
+      ]
+    },
+    {
+      "id": "normalized-047",
+      "result_type": "normalized",
+      "text": "YOU SHALL NOT PASS.",
+      "expected_quotes": [
+        "You shall not pass."
+      ]
+    },
+    {
+      "id": "normalized-048",
+      "result_type": "normalized",
+      "text": "It is a strange fate that we should suffer so much fear and doubt over so small a thing!!!",
+      "expected_quotes": [
+        "It is a strange fate that we should suffer so much fear and doubt over so small a thing."
+      ]
+    },
+    {
+      "id": "variation-049",
+      "result_type": "variation",
+      "text": "Someone in chat paraphrased it perfectly: standing up to friends takes real courage",
+      "expected_quotes": [
+        "It takes a great deal of bravery to stand up your enemies but a great deal more to stand up to your friends."
+      ]
+    },
+    {
+      "id": "variation-050",
+      "result_type": "variation",
+      "text": "I can't quote it exactly, but the vibe was \"your choices show who you are\"",
+      "expected_quotes": [
+        "It is not our abilities that show what we truly are. It is our choices."
+      ]
+    },
+    {
+      "id": "variation-051",
+      "result_type": "variation",
+      "text": "The way they put it stuck with me — no magic can bring the dead back",
+      "expected_quotes": [
+        "No spell can reawaken the dead, Harry."
+      ]
+    },
+    {
+      "id": "variation-052",
+      "result_type": "variation",
+      "text": "Not word-for-word, more like: forgive me for getting sentimental",
+      "expected_quotes": [
+        "Forgive my mawkishness, Harry. I'm an old man."
+      ]
+    },
+    {
+      "id": "variation-053",
+      "result_type": "variation",
+      "text": "Someone in chat paraphrased it perfectly: once again, I am asking too much of you",
+      "expected_quotes": [
+        "Once again, I must ask too much of you, Harry."
+      ]
+    },
+    {
+      "id": "variation-054",
+      "result_type": "variation",
+      "text": "I can't quote it exactly, but the vibe was \"he is not gone while we remain loyal\"",
+      "expected_quotes": [
+        "He'll never be gone. Not as long as those who remain are loyal to him."
+      ]
+    },
+    {
+      "id": "variation-055",
+      "result_type": "variation",
+      "text": "The way they put it stuck with me — we will make them proud",
+      "expected_quotes": [
+        "We're gonna make them proud, Neville. That's a promise."
+      ]
+    },
+    {
+      "id": "variation-056",
+      "result_type": "variation",
+      "text": "Not word-for-word, more like: hard work matters, but so does believing in yourself",
+      "expected_quotes": [
+        "Working hard is important, but there's something that matters even more: believing in yourself."
+      ]
+    },
+    {
+      "id": "variation-057",
+      "result_type": "variation",
+      "text": "Someone in chat paraphrased it perfectly: This place is bad, but we don't have to be.",
+      "expected_quotes": [
+        "Morty, You're right. Town is bad. But that doesn't mean that we have to be."
+      ]
+    },
+    {
+      "id": "variation-058",
+      "result_type": "variation",
+      "text": "I can't quote it exactly, but the vibe was \"Speeches are for campaigning. Time for action.\"",
+      "expected_quotes": [
+        "But speeches are for campaigning. Now, is the time for action."
+      ]
+    },
+    {
+      "id": "variation-059",
+      "result_type": "variation",
+      "text": "The way they put it stuck with me — I thought the point was to feel superior.",
+      "expected_quotes": [
+        "I thought the whole point of having a dog was to feel superior, Jerry?"
+      ]
+    },
+    {
+      "id": "variation-060",
+      "result_type": "variation",
+      "text": "Not word-for-word, more like: Chaos happens; apparently that's the universe's fault.",
+      "expected_quotes": [
+        "The universe is a crazy, chaotic place."
+      ]
+    },
+    {
+      "id": "variation-061",
+      "result_type": "variation",
+      "text": "Someone in chat paraphrased it perfectly: Turns out parents are still figuring it out too.",
+      "expected_quotes": [
+        "Parents are just kids having kids."
+      ]
+    },
+    {
+      "id": "variation-062",
+      "result_type": "variation",
+      "text": "I can't quote it exactly, but the vibe was \"Protect the symbol; bury the man he really was.\"",
+      "expected_quotes": [
+        "Our people will get more from the idea he represented than from the Jelly Bean he actually was."
+      ]
+    },
+    {
+      "id": "variation-063",
+      "result_type": "variation",
+      "text": "The way they put it stuck with me — Nobody exists on purpose. Come watch TV.",
+      "expected_quotes": [
+        "Nobody exists on purpose, nobody belongs anywhere, everybody's gonna die, come watch TV."
+      ]
+    },
+    {
+      "id": "variation-064",
+      "result_type": "variation",
+      "text": "Not word-for-word, more like: Tradition isn't evidence.",
+      "expected_quotes": [
+        "Scientifically, traditions are an idiot thing."
+      ]
+    },
+    {
+      "id": "variation-065",
+      "result_type": "variation",
+      "text": "Someone in chat paraphrased it perfectly: Just when you think you know them, they surprise you again.",
+      "expected_quotes": [
+        "Hobbits really are amazing creatures. You can learn all that there is to know about their ways in a month and yet, after a hundred years, they can still surprise you."
+      ]
+    },
+    {
+      "id": "variation-066",
+      "result_type": "variation",
+      "text": "I can't quote it exactly, but the vibe was \"Nothing I could give you would mean more than what you already carry.\"",
+      "expected_quotes": [
+        "I have nothing greater to give than the gift you already bear."
+      ]
+    },
+    {
+      "id": "variation-067",
+      "result_type": "variation",
+      "text": "The way they put it stuck with me — A wizard is never late.",
+      "expected_quotes": [
+        "A wizard is never late, Frodo Baggins. Nor is he early; he arrives precisely when he means to."
+      ]
+    },
+    {
+      "id": "variation-068",
+      "result_type": "variation",
+      "text": "Not word-for-word, more like: We choose what to do with the time we are given.",
+      "expected_quotes": [
+        "All we have to decide is what to do with the time that is given to us."
+      ]
+    },
+    {
+      "id": "variation-069",
+      "result_type": "variation",
+      "text": "Someone in chat paraphrased it perfectly: One ring to rule them all.",
+      "expected_quotes": [
+        "One Ring to rule them all, One Ring to find them, One Ring to bring them all, and in the darkness bind them."
+      ]
+    },
+    {
+      "id": "variation-070",
+      "result_type": "variation",
+      "text": "I can't quote it exactly, but the vibe was \"Even the smallest person can change the future.\"",
+      "expected_quotes": [
+        "Even the smallest person can change the course of the future."
+      ]
+    },
+    {
+      "id": "variation-071",
+      "result_type": "variation",
+      "text": "The way they put it stuck with me — No further.",
+      "expected_quotes": [
+        "You shall not pass."
+      ]
+    },
+    {
+      "id": "variation-072",
+      "result_type": "variation",
+      "text": "Not word-for-word, more like: So much fear and doubt over so small a thing.",
+      "expected_quotes": [
+        "It is a strange fate that we should suffer so much fear and doubt over so small a thing."
+      ]
+    },
+    {
+      "id": "paraphrase-073",
+      "result_type": "paraphrase",
+      "text": "It takes a great deal of bravery to stand up your enemies, but even more courage to stand up to your friends.",
+      "expected_quotes": [
+        "It takes a great deal of bravery to stand up your enemies but a great deal more to stand up to your friends."
+      ]
+    },
+    {
+      "id": "paraphrase-074",
+      "result_type": "paraphrase",
+      "text": "It is not our abilities that show what we truly are; it is the choices we make.",
+      "expected_quotes": [
+        "It is not our abilities that show what we truly are. It is our choices."
+      ]
+    },
+    {
+      "id": "paraphrase-075",
+      "result_type": "paraphrase",
+      "text": "No spell could reawaken the dead, Harry.",
+      "expected_quotes": [
+        "No spell can reawaken the dead, Harry."
+      ]
+    },
+    {
+      "id": "paraphrase-076",
+      "result_type": "paraphrase",
+      "text": "Forgive my mawkishness, Harry — I am an old man, and I get sentimental.",
+      "expected_quotes": [
+        "Forgive my mawkishness, Harry. I'm an old man."
+      ]
+    },
+    {
+      "id": "paraphrase-077",
+      "result_type": "paraphrase",
+      "text": "Once again, I must ask far too much of you, Harry.",
+      "expected_quotes": [
+        "Once again, I must ask too much of you, Harry."
+      ]
+    },
+    {
+      "id": "paraphrase-078",
+      "result_type": "paraphrase",
+      "text": "He'll never truly be gone, not as long as those who remain are loyal to him.",
+      "expected_quotes": [
+        "He'll never be gone. Not as long as those who remain are loyal to him."
+      ]
+    },
+    {
+      "id": "paraphrase-079",
+      "result_type": "paraphrase",
+      "text": "We will make them proud, Neville — that's a promise.",
+      "expected_quotes": [
+        "We're gonna make them proud, Neville. That's a promise."
+      ]
+    },
+    {
+      "id": "paraphrase-080",
+      "result_type": "paraphrase",
+      "text": "Working hard is important, but there is something that matters even more: trusting yourself.",
+      "expected_quotes": [
+        "Working hard is important, but there's something that matters even more: believing in yourself."
+      ]
+    },
+    {
+      "id": "paraphrase-081",
+      "result_type": "paraphrase",
+      "text": "Morty, you're right that town is bad, but that doesn't mean we have to be bad too.",
+      "expected_quotes": [
+        "Morty, You're right. Town is bad. But that doesn't mean that we have to be."
+      ]
+    },
+    {
+      "id": "paraphrase-082",
+      "result_type": "paraphrase",
+      "text": "Speeches are for campaigning — now is the time for action.",
+      "expected_quotes": [
+        "But speeches are for campaigning. Now, is the time for action."
+      ]
+    },
+    {
+      "id": "paraphrase-083",
+      "result_type": "paraphrase",
+      "text": "Jerry, I thought the whole point of having a dog was feeling superior?",
+      "expected_quotes": [
+        "I thought the whole point of having a dog was to feel superior, Jerry?"
+      ]
+    },
+    {
+      "id": "paraphrase-084",
+      "result_type": "paraphrase",
+      "text": "The universe remains a crazy, chaotic place.",
+      "expected_quotes": [
+        "The universe is a crazy, chaotic place."
+      ]
+    },
+    {
+      "id": "paraphrase-085",
+      "result_type": "paraphrase",
+      "text": "Parents are mostly just kids having kids.",
+      "expected_quotes": [
+        "Parents are just kids having kids."
+      ]
+    },
+    {
+      "id": "paraphrase-086",
+      "result_type": "paraphrase",
+      "text": "Our people will get more from the idea he stood for than from the Jelly Bean he actually was.",
+      "expected_quotes": [
+        "Our people will get more from the idea he represented than from the Jelly Bean he actually was."
+      ]
+    },
+    {
+      "id": "paraphrase-087",
+      "result_type": "paraphrase",
+      "text": "Nobody exists on purpose, nobody belongs anywhere, everybody's gonna die — so come watch TV.",
+      "expected_quotes": [
+        "Nobody exists on purpose, nobody belongs anywhere, everybody's gonna die, come watch TV."
+      ]
+    },
+    {
+      "id": "paraphrase-088",
+      "result_type": "paraphrase",
+      "text": "Scientifically, traditions are a pretty idiot thing.",
+      "expected_quotes": [
+        "Scientifically, traditions are an idiot thing."
+      ]
+    },
+    {
+      "id": "paraphrase-089",
+      "result_type": "paraphrase",
+      "text": "Hobbits really are amazing creatures — you can learn their ways in a month, yet after a hundred years they can still surprise you.",
+      "expected_quotes": [
+        "Hobbits really are amazing creatures. You can learn all that there is to know about their ways in a month and yet, after a hundred years, they can still surprise you."
+      ]
+    },
+    {
+      "id": "paraphrase-090",
+      "result_type": "paraphrase",
+      "text": "I have nothing greater to give you than the gift you already bear.",
+      "expected_quotes": [
+        "I have nothing greater to give than the gift you already bear."
+      ]
+    },
+    {
+      "id": "paraphrase-091",
+      "result_type": "paraphrase",
+      "text": "A wizard is never late, Frodo Baggins. Nor is he early, and he arrives precisely when he means to.",
+      "expected_quotes": [
+        "A wizard is never late, Frodo Baggins. Nor is he early; he arrives precisely when he means to."
+      ]
+    },
+    {
+      "id": "paraphrase-092",
+      "result_type": "paraphrase",
+      "text": "All we have to decide is what we do with the time that is given to us.",
+      "expected_quotes": [
+        "All we have to decide is what to do with the time that is given to us."
+      ]
+    },
+    {
+      "id": "paraphrase-093",
+      "result_type": "paraphrase",
+      "text": "One Ring to rule them all, One Ring to find them, One Ring to bring them all and in darkness bind them.",
+      "expected_quotes": [
+        "One Ring to rule them all, One Ring to find them, One Ring to bring them all, and in the darkness bind them."
+      ]
+    },
+    {
+      "id": "paraphrase-094",
+      "result_type": "paraphrase",
+      "text": "Even the smallest person can change the course of what comes next.",
+      "expected_quotes": [
+        "Even the smallest person can change the course of the future."
+      ]
+    },
+    {
+      "id": "paraphrase-095",
+      "result_type": "paraphrase",
+      "text": "You shall not go past me here.",
+      "expected_quotes": [
+        "You shall not pass."
+      ]
+    },
+    {
+      "id": "paraphrase-096",
+      "result_type": "paraphrase",
+      "text": "It is a strange fate that we should suffer so much fear and doubt over such a small thing.",
+      "expected_quotes": [
+        "It is a strange fate that we should suffer so much fear and doubt over so small a thing."
+      ]
+    },
+    {
+      "id": "embedded-097",
+      "result_type": "embedded",
+      "text": "The message ended with this exact line from the film: It takes a great deal of bravery to stand up your enemies but a great deal more to stand up to your friends.",
+      "expected_quotes": [
+        "It takes a great deal of bravery to stand up your enemies but a great deal more to stand up to your friends."
+      ]
+    },
+    {
+      "id": "embedded-098",
+      "result_type": "embedded",
+      "text": "I pasted the subtitle because it nailed the moment: It is not our abilities that show what we truly are. It is our choices.",
+      "expected_quotes": [
+        "It is not our abilities that show what we truly are. It is our choices."
+      ]
+    },
+    {
+      "id": "embedded-099",
+      "result_type": "embedded",
+      "text": "Still stuck on what they said verbatim: No spell can reawaken the dead, Harry.",
+      "expected_quotes": [
+        "No spell can reawaken the dead, Harry."
+      ]
+    },
+    {
+      "id": "embedded-100",
+      "result_type": "embedded",
+      "text": "Group chat devolved into quoting, and someone dropped: Forgive my mawkishness, Harry. I'm an old man.",
+      "expected_quotes": [
+        "Forgive my mawkishness, Harry. I'm an old man."
+      ]
+    },
+    {
+      "id": "embedded-101",
+      "result_type": "embedded",
+      "text": "Hard to explain without quoting directly: Once again, I must ask too much of you, Harry.",
+      "expected_quotes": [
+        "Once again, I must ask too much of you, Harry."
+      ]
+    },
+    {
+      "id": "embedded-102",
+      "result_type": "embedded",
+      "text": "After the argument cooled, one line kept replaying: He'll never be gone. Not as long as those who remain are loyal to him.",
+      "expected_quotes": [
+        "He'll never be gone. Not as long as those who remain are loyal to him."
+      ]
+    },
+    {
+      "id": "embedded-103",
+      "result_type": "embedded",
+      "text": "The message ended with this exact line from the film: We're gonna make them proud, Neville. That's a promise.",
+      "expected_quotes": [
+        "We're gonna make them proud, Neville. That's a promise."
+      ]
+    },
+    {
+      "id": "embedded-104",
+      "result_type": "embedded",
+      "text": "I pasted the subtitle because it nailed the moment: Working hard is important, but there's something that matters even more: believing in yourself.",
+      "expected_quotes": [
+        "Working hard is important, but there's something that matters even more: believing in yourself."
+      ]
+    },
+    {
+      "id": "embedded-105",
+      "result_type": "embedded",
+      "text": "Still stuck on what they said verbatim: Morty, You're right. Town is bad. But that doesn't mean that we have to be.",
+      "expected_quotes": [
+        "Morty, You're right. Town is bad. But that doesn't mean that we have to be."
+      ]
+    },
+    {
+      "id": "embedded-106",
+      "result_type": "embedded",
+      "text": "Group chat devolved into quoting, and someone dropped: But speeches are for campaigning. Now, is the time for action.",
+      "expected_quotes": [
+        "But speeches are for campaigning. Now, is the time for action."
+      ]
+    },
+    {
+      "id": "embedded-107",
+      "result_type": "embedded",
+      "text": "Hard to explain without quoting directly: I thought the whole point of having a dog was to feel superior, Jerry?",
+      "expected_quotes": [
+        "I thought the whole point of having a dog was to feel superior, Jerry?"
+      ]
+    },
+    {
+      "id": "embedded-108",
+      "result_type": "embedded",
+      "text": "After the argument cooled, one line kept replaying: The universe is a crazy, chaotic place.",
+      "expected_quotes": [
+        "The universe is a crazy, chaotic place."
+      ]
+    },
+    {
+      "id": "embedded-109",
+      "result_type": "embedded",
+      "text": "The message ended with this exact line from the film: Parents are just kids having kids.",
+      "expected_quotes": [
+        "Parents are just kids having kids."
+      ]
+    },
+    {
+      "id": "embedded-110",
+      "result_type": "embedded",
+      "text": "I pasted the subtitle because it nailed the moment: Our people will get more from the idea he represented than from the Jelly Bean he actually was.",
+      "expected_quotes": [
+        "Our people will get more from the idea he represented than from the Jelly Bean he actually was."
+      ]
+    },
+    {
+      "id": "embedded-111",
+      "result_type": "embedded",
+      "text": "Still stuck on what they said verbatim: Nobody exists on purpose, nobody belongs anywhere, everybody's gonna die, come watch TV.",
+      "expected_quotes": [
+        "Nobody exists on purpose, nobody belongs anywhere, everybody's gonna die, come watch TV."
+      ]
+    },
+    {
+      "id": "embedded-112",
+      "result_type": "embedded",
+      "text": "Group chat devolved into quoting, and someone dropped: Scientifically, traditions are an idiot thing.",
+      "expected_quotes": [
+        "Scientifically, traditions are an idiot thing."
+      ]
+    },
+    {
+      "id": "embedded-113",
+      "result_type": "embedded",
+      "text": "Hard to explain without quoting directly: Hobbits really are amazing creatures. You can learn all that there is to know about their ways in a month and yet, after a hundred years, they can still surprise you.",
+      "expected_quotes": [
+        "Hobbits really are amazing creatures. You can learn all that there is to know about their ways in a month and yet, after a hundred years, they can still surprise you."
+      ]
+    },
+    {
+      "id": "embedded-114",
+      "result_type": "embedded",
+      "text": "After the argument cooled, one line kept replaying: I have nothing greater to give than the gift you already bear.",
+      "expected_quotes": [
+        "I have nothing greater to give than the gift you already bear."
+      ]
+    },
+    {
+      "id": "embedded-115",
+      "result_type": "embedded",
+      "text": "The message ended with this exact line from the film: A wizard is never late, Frodo Baggins. Nor is he early; he arrives precisely when he means to.",
+      "expected_quotes": [
+        "A wizard is never late, Frodo Baggins. Nor is he early; he arrives precisely when he means to."
+      ]
+    },
+    {
+      "id": "embedded-116",
+      "result_type": "embedded",
+      "text": "I pasted the subtitle because it nailed the moment: All we have to decide is what to do with the time that is given to us.",
+      "expected_quotes": [
+        "All we have to decide is what to do with the time that is given to us."
+      ]
+    },
+    {
+      "id": "embedded-117",
+      "result_type": "embedded",
+      "text": "Still stuck on what they said verbatim: One Ring to rule them all, One Ring to find them, One Ring to bring them all, and in the darkness bind them.",
+      "expected_quotes": [
+        "One Ring to rule them all, One Ring to find them, One Ring to bring them all, and in the darkness bind them."
+      ]
+    },
+    {
+      "id": "embedded-118",
+      "result_type": "embedded",
+      "text": "Group chat devolved into quoting, and someone dropped: Even the smallest person can change the course of the future.",
+      "expected_quotes": [
+        "Even the smallest person can change the course of the future."
+      ]
+    },
+    {
+      "id": "embedded-119",
+      "result_type": "embedded",
+      "text": "Hard to explain without quoting directly: You shall not pass.",
+      "expected_quotes": [
+        "You shall not pass."
+      ]
+    },
+    {
+      "id": "embedded-120",
+      "result_type": "embedded",
+      "text": "After the argument cooled, one line kept replaying: It is a strange fate that we should suffer so much fear and doubt over so small a thing.",
+      "expected_quotes": [
+        "It is a strange fate that we should suffer so much fear and doubt over so small a thing."
+      ]
+    },
+    {
+      "id": "multi-121",
+      "result_type": "multi",
+      "text": "Our charity run group chat turned into a Potter pep talk: We're gonna make them proud, Neville. That's a promise. Then someone replied Maybe you don't have to do this by yourself, mate.",
+      "expected_quotes": [
+        "We're gonna make them proud, Neville. That's a promise.",
+        "Maybe you don't have to do this by yourself, mate."
+      ]
+    },
+    {
+      "id": "multi-122",
+      "result_type": "multi",
+      "text": "We were arguing about calling out a toxic club leader when two lines got pasted back-to-back — It takes a great deal of bravery to stand up your enemies but a great deal more to stand up to your friends. and It is not our abilities that show what we truly are. It is our choices.",
+      "expected_quotes": [
+        "It takes a great deal of bravery to stand up your enemies but a great deal more to stand up to your friends.",
+        "It is not our abilities that show what we truly are. It is our choices."
+      ]
+    },
+    {
+      "id": "multi-123",
+      "result_type": "multi",
+      "text": "After a sad rewatch someone wrote No spell can reawaken the dead, Harry. Another person answered with Now, fear makes people do terrible things, Harry.",
+      "expected_quotes": [
+        "No spell can reawaken the dead, Harry.",
+        "Now, fear makes people do terrible things, Harry."
+      ]
+    },
+    {
+      "id": "multi-124",
+      "result_type": "multi",
+      "text": "Welcome-back thread for a teammate who keeps the group together: There's no Hogwarts without you, Hagrid. Someone added Working hard is important, but there's something that matters even more: believing in yourself.",
+      "expected_quotes": [
+        "There's no Hogwarts without you, Hagrid.",
+        "Working hard is important, but there's something that matters even more: believing in yourself."
+      ]
+    },
+    {
+      "id": "multi-125",
+      "result_type": "multi",
+      "text": "Mission-planning voice note quoted two lines about burden: Once again, I must ask too much of you, Harry. and Harry, it's you that has to go on. Not me. Not Hermione. You.",
+      "expected_quotes": [
+        "Once again, I must ask too much of you, Harry.",
+        "Harry, it's you that has to go on. Not me. Not Hermione. You."
+      ]
+    },
+    {
+      "id": "multi-126",
+      "result_type": "multi",
+      "text": "Memorial post for a mentor who left the company: He'll never be gone. Not as long as those who remain are loyal to him. A comment underneath said I trusted the man I know.",
+      "expected_quotes": [
+        "He'll never be gone. Not as long as those who remain are loyal to him.",
+        "I trusted the man I know."
+      ]
+    },
+    {
+      "id": "multi-127",
+      "result_type": "multi",
+      "text": "Exam-week support thread mixed encouragement with priorities: Working hard is important, but there's something that matters even more: believing in yourself. Later the same person posted There are more important things. Friendship and bravery.",
+      "expected_quotes": [
+        "Working hard is important, but there's something that matters even more: believing in yourself.",
+        "There are more important things. Friendship and bravery."
+      ]
+    },
+    {
+      "id": "multi-128",
+      "result_type": "multi",
+      "text": "Snarky study break: Believe me, professor, I've been asking myself the same question for six years. followed immediately by Clearly, fame isn't everything.",
+      "expected_quotes": [
+        "Believe me, professor, I've been asking myself the same question for six years.",
+        "Clearly, fame isn't everything."
+      ]
+    },
+    {
+      "id": "multi-129",
+      "result_type": "multi",
+      "text": "Rick and Morty night in the dorm: Homework is stupid, the whole point is to get less of it. My roommate countered with That's planning for failure, Morty, even dumber than regular planning.",
+      "expected_quotes": [
+        "Homework is stupid, the whole point is to get less of it.",
+        "That's planning for failure, Morty, even dumber than regular planning."
+      ]
+    },
+    {
+      "id": "multi-130",
+      "result_type": "multi",
+      "text": "Debate club used two clips about talk versus action: Morty, You're right. Town is bad. But that doesn't mean that we have to be. Then someone dropped But speeches are for campaigning. Now, is the time for action.",
+      "expected_quotes": [
+        "Morty, You're right. Town is bad. But that doesn't mean that we have to be.",
+        "But speeches are for campaigning. Now, is the time for action."
+      ]
+    },
+    {
+      "id": "multi-131",
+      "result_type": "multi",
+      "text": "Family group chat after a rough week: Parents are just kids having kids. My cousin replied Nobody exists on purpose, nobody belongs anywhere, everybody's gonna die, come watch TV.",
+      "expected_quotes": [
+        "Parents are just kids having kids.",
+        "Nobody exists on purpose, nobody belongs anywhere, everybody's gonna die, come watch TV."
+      ]
+    },
+    {
+      "id": "multi-132",
+      "result_type": "multi",
+      "text": "Science fair drama recap: Scientifically, traditions are an idiot thing. and You can't make people like you. You just have to wait for hating you to bore them.",
+      "expected_quotes": [
+        "Scientifically, traditions are an idiot thing.",
+        "You can't make people like you. You just have to wait for hating you to bore them."
+      ]
+    },
+    {
+      "id": "multi-133",
+      "result_type": "multi",
+      "text": "Town-hall thread about a disgraced leader: Our people will get more from the idea he represented than from the Jelly Bean he actually was. Someone else pasted Because when you're an asshole, it doesn't matter how right you are, nobody wants to give you the satisfaction.",
+      "expected_quotes": [
+        "Our people will get more from the idea he represented than from the Jelly Bean he actually was.",
+        "Because when you're an asshole, it doesn't matter how right you are, nobody wants to give you the satisfaction."
+      ]
+    },
+    {
+      "id": "multi-134",
+      "result_type": "multi",
+      "text": "Road-trip rant after a mess: The universe is a crazy, chaotic place. Then the next message was Otherwise, you are just an inert chunk of randomly assembled molecules, drifting wherever the universe blows you.",
+      "expected_quotes": [
+        "The universe is a crazy, chaotic place.",
+        "Otherwise, you are just an inert chunk of randomly assembled molecules, drifting wherever the universe blows you."
+      ]
+    },
+    {
+      "id": "multi-135",
+      "result_type": "multi",
+      "text": "Pet debate in the apartment chat: I thought the whole point of having a dog was to feel superior, Jerry? which spiraled into To live is to risk it all.",
+      "expected_quotes": [
+        "I thought the whole point of having a dog was to feel superior, Jerry?",
+        "To live is to risk it all."
+      ]
+    },
+    {
+      "id": "multi-136",
+      "result_type": "multi",
+      "text": "Anti-bureaucracy rant night: You want to be safe from the government, so you became a stupid government. That makes every Rick here less Rick than me. When you know nothing matters, the universe is yours. came up right after.",
+      "expected_quotes": [
+        "You want to be safe from the government, so you became a stupid government. That makes every Rick here less Rick than me.",
+        "When you know nothing matters, the universe is yours."
+      ]
+    },
+    {
+      "id": "multi-137",
+      "result_type": "multi",
+      "text": "School obligations vs adventures thread: How is my son supposed to pass his classes if you keep dragging him off for a high concept Sci Fi rigmarole? Someone answered with I'm an idiot, and I love my son.",
+      "expected_quotes": [
+        "How is my son supposed to pass his classes if you keep dragging him off for a high concept Sci Fi rigmarole?",
+        "I'm an idiot, and I love my son."
+      ]
+    },
+    {
+      "id": "multi-138",
+      "result_type": "multi",
+      "text": "Late-night existential voice notes: When you know nothing matters, the universe is yours. then Weddings are basically funerals with cake.",
+      "expected_quotes": [
+        "When you know nothing matters, the universe is yours.",
+        "Weddings are basically funerals with cake."
+      ]
+    },
+    {
+      "id": "multi-139",
+      "result_type": "multi",
+      "text": "LOTR rewatch group: That there's some good in this world, Mr. Frodo. And it's worth fighting for. Sam's next line in the thread was I can't carry it for you, but I can carry you.",
+      "expected_quotes": [
+        "That there's some good in this world, Mr. Frodo. And it's worth fighting for.",
+        "I can't carry it for you, but I can carry you."
+      ]
+    },
+    {
+      "id": "multi-140",
+      "result_type": "multi",
+      "text": "Travel delays group chat: A wizard is never late, Frodo Baggins. Nor is he early; he arrives precisely when he means to. Someone answered All we have to decide is what to do with the time that is given to us.",
+      "expected_quotes": [
+        "A wizard is never late, Frodo Baggins. Nor is he early; he arrives precisely when he means to.",
+        "All we have to decide is what to do with the time that is given to us."
+      ]
+    },
+    {
+      "id": "multi-141",
+      "result_type": "multi",
+      "text": "Hiking safety argument: You shall not pass. My friend replied with Whatever happens, stay with me. I'll look out for you.",
+      "expected_quotes": [
+        "You shall not pass.",
+        "Whatever happens, stay with me. I'll look out for you."
+      ]
+    },
+    {
+      "id": "multi-142",
+      "result_type": "multi",
+      "text": "Pre-game hype in our fantasy league chat: A day may come when the courage of men fails, when we forsake our friends and break all bonds of fellowship, but it is not this day. Then Long ago we fought and died together. We've come to honor that allegiance.",
+      "expected_quotes": [
+        "A day may come when the courage of men fails, when we forsake our friends and break all bonds of fellowship, but it is not this day.",
+        "Long ago we fought and died together. We've come to honor that allegiance."
+      ]
+    },
+    {
+      "id": "multi-143",
+      "result_type": "multi",
+      "text": "Gift exchange got emotional: I have nothing greater to give than the gift you already bear. which made someone post Hobbits really are amazing creatures. You can learn all that there is to know about their ways in a month and yet, after a hundred years, they can still surprise you.",
+      "expected_quotes": [
+        "I have nothing greater to give than the gift you already bear.",
+        "Hobbits really are amazing creatures. You can learn all that there is to know about their ways in a month and yet, after a hundred years, they can still surprise you."
+      ]
+    },
+    {
+      "id": "multi-144",
+      "result_type": "multi",
+      "text": "Ring lore meme thread turned serious: One Ring to rule them all, One Ring to find them, One Ring to bring them all, and in the darkness bind them. Then It is a strange fate that we should suffer so much fear and doubt over so small a thing.",
+      "expected_quotes": [
+        "One Ring to rule them all, One Ring to find them, One Ring to bring them all, and in the darkness bind them.",
+        "It is a strange fate that we should suffer so much fear and doubt over so small a thing."
+      ]
+    },
+    {
+      "id": "cross_source-145",
+      "result_type": "cross_source",
+      "text": "Two fandom lines I pair when talking about agency: It is not our abilities that show what we truly are. It is our choices. and All we have to decide is what to do with the time that is given to us.",
+      "expected_quotes": [
+        "It is not our abilities that show what we truly are. It is our choices.",
+        "All we have to decide is what to do with the time that is given to us."
+      ]
+    },
+    {
+      "id": "cross_source-146",
+      "result_type": "cross_source",
+      "text": "When morale crashed, one friend sent There are more important things. Friendship and bravery. and another replied Nobody exists on purpose, nobody belongs anywhere, everybody's gonna die, come watch TV.",
+      "expected_quotes": [
+        "There are more important things. Friendship and bravery.",
+        "Nobody exists on purpose, nobody belongs anywhere, everybody's gonna die, come watch TV."
+      ]
+    },
+    {
+      "id": "cross_source-147",
+      "result_type": "cross_source",
+      "text": "Comparing toxic-system speeches we have saved: Morty, You're right. Town is bad. But that doesn't mean that we have to be. next to He'll never be gone. Not as long as those who remain are loyal to him.",
+      "expected_quotes": [
+        "Morty, You're right. Town is bad. But that doesn't mean that we have to be.",
+        "He'll never be gone. Not as long as those who remain are loyal to him."
+      ]
+    },
+    {
+      "id": "cross_source-148",
+      "result_type": "cross_source",
+      "text": "Boundary-setting memes in one message: You shall not pass. and I thought the whole point of having a dog was to feel superior, Jerry?",
+      "expected_quotes": [
+        "You shall not pass.",
+        "I thought the whole point of having a dog was to feel superior, Jerry?"
+      ]
+    },
+    {
+      "id": "cross_source-149",
+      "result_type": "cross_source",
+      "text": "Anti-establishment rants we juxtapose: You want to be safe from the government, so you became a stupid government. That makes every Rick here less Rick than me. alongside Once again, I must ask too much of you, Harry.",
+      "expected_quotes": [
+        "You want to be safe from the government, so you became a stupid government. That makes every Rick here less Rick than me.",
+        "Once again, I must ask too much of you, Harry."
+      ]
+    },
+    {
+      "id": "cross_source-150",
+      "result_type": "cross_source",
+      "text": "Comfort lines we swap when friends burn out: That there's some good in this world, Mr. Frodo. And it's worth fighting for. and Parents are just kids having kids.",
+      "expected_quotes": [
+        "That there's some good in this world, Mr. Frodo. And it's worth fighting for.",
+        "Parents are just kids having kids."
+      ]
+    },
+    {
+      "id": "cross_source-151",
+      "result_type": "cross_source",
+      "text": "Study motivation vs Rick logic: Working hard is important, but there's something that matters even more: believing in yourself. Homework is stupid, the whole point is to get less of it.",
+      "expected_quotes": [
+        "Working hard is important, but there's something that matters even more: believing in yourself.",
+        "Homework is stupid, the whole point is to get less of it."
+      ]
+    },
+    {
+      "id": "cross_source-152",
+      "result_type": "cross_source",
+      "text": "Chaos travel stories in one rant: A wizard is never late, Frodo Baggins. Nor is he early; he arrives precisely when he means to. The universe is a crazy, chaotic place.",
+      "expected_quotes": [
+        "A wizard is never late, Frodo Baggins. Nor is he early; he arrives precisely when he means to.",
+        "The universe is a crazy, chaotic place."
+      ]
+    },
+    {
+      "id": "cross_source-153",
+      "result_type": "cross_source",
+      "text": "Promise lines we quote before tough team projects: We're gonna make them proud, Neville. That's a promise. Long ago we fought and died together. We've come to honor that allegiance.",
+      "expected_quotes": [
+        "We're gonna make them proud, Neville. That's a promise.",
+        "Long ago we fought and died together. We've come to honor that allegiance."
+      ]
+    },
+    {
+      "id": "cross_source-154",
+      "result_type": "cross_source",
+      "text": "Risk-taking pep talk mashup: To live is to risk it all. Even the smallest person can change the course of the future.",
+      "expected_quotes": [
+        "To live is to risk it all.",
+        "Even the smallest person can change the course of the future."
+      ]
+    },
+    {
+      "id": "cross_source-155",
+      "result_type": "cross_source",
+      "text": "Trust after messy revelations: I trusted the man I know. I have nothing greater to give than the gift you already bear.",
+      "expected_quotes": [
+        "I trusted the man I know.",
+        "I have nothing greater to give than the gift you already bear."
+      ]
+    },
+    {
+      "id": "cross_source-156",
+      "result_type": "cross_source",
+      "text": "Burnout versus political cynicism: Crossed your brilliant mind that I don't want to do this anymore? Our people will get more from the idea he represented than from the Jelly Bean he actually was.",
+      "expected_quotes": [
+        "Crossed your brilliant mind that I don't want to do this anymore?",
+        "Our people will get more from the idea he represented than from the Jelly Bean he actually was."
+      ]
+    },
+    {
+      "id": "cross_source-157",
+      "result_type": "cross_source",
+      "text": "Surprise and tradition argument: Hobbits really are amazing creatures. You can learn all that there is to know about their ways in a month and yet, after a hundred years, they can still surprise you. Scientifically, traditions are an idiot thing.",
+      "expected_quotes": [
+        "Hobbits really are amazing creatures. You can learn all that there is to know about their ways in a month and yet, after a hundred years, they can still surprise you.",
+        "Scientifically, traditions are an idiot thing."
+      ]
+    },
+    {
+      "id": "cross_source-158",
+      "result_type": "cross_source",
+      "text": "Support versus being right online: I can't carry it for you, but I can carry you. Because when you're an asshole, it doesn't matter how right you are, nobody wants to give you the satisfaction.",
+      "expected_quotes": [
+        "I can't carry it for you, but I can carry you.",
+        "Because when you're an asshole, it doesn't matter how right you are, nobody wants to give you the satisfaction."
+      ]
+    },
+    {
+      "id": "cross_source-159",
+      "result_type": "cross_source",
+      "text": "Power and loss in one breath: One Ring to rule them all, One Ring to find them, One Ring to bring them all, and in the darkness bind them. No spell can reawaken the dead, Harry.",
+      "expected_quotes": [
+        "One Ring to rule them all, One Ring to find them, One Ring to bring them all, and in the darkness bind them.",
+        "No spell can reawaken the dead, Harry."
+      ]
+    },
+    {
+      "id": "cross_source-160",
+      "result_type": "cross_source",
+      "text": "Fear-driven politics versus ruthless action: Now, fear makes people do terrible things, Harry. But speeches are for campaigning. Now, is the time for action.",
+      "expected_quotes": [
+        "Now, fear makes people do terrible things, Harry.",
+        "But speeches are for campaigning. Now, is the time for action."
+      ]
+    },
+    {
+      "id": "cross_source-161",
+      "result_type": "cross_source",
+      "text": "Belonging in a group chat: There's no Hogwarts without you, Hagrid. Even the smallest person can change the course of the future.",
+      "expected_quotes": [
+        "There's no Hogwarts without you, Hagrid.",
+        "Even the smallest person can change the course of the future."
+      ]
+    },
+    {
+      "id": "cross_source-162",
+      "result_type": "cross_source",
+      "text": "Oddly specific pep talk combo: Inside every girl, a secret swan slumbers longing to burst forth and take flight. When you know nothing matters, the universe is yours.",
+      "expected_quotes": [
+        "Inside every girl, a secret swan slumbers longing to burst forth and take flight.",
+        "When you know nothing matters, the universe is yours."
+      ]
+    },
+    {
+      "id": "cross_source-163",
+      "result_type": "cross_source",
+      "text": "Mortality talk that got too heavy: Death is just another path. One that we all must take. No spell can reawaken the dead, Harry.",
+      "expected_quotes": [
+        "Death is just another path. One that we all must take.",
+        "No spell can reawaken the dead, Harry."
+      ]
+    },
+    {
+      "id": "cross_source-164",
+      "result_type": "cross_source",
+      "text": "Oathbreakers and backup plans: They had no honor in life. They have none now in death. That's planning for failure, Morty, even dumber than regular planning.",
+      "expected_quotes": [
+        "They had no honor in life. They have none now in death.",
+        "That's planning for failure, Morty, even dumber than regular planning."
+      ]
+    },
+    {
+      "id": "cross_source-165",
+      "result_type": "cross_source",
+      "text": "Tools choosing people and approval online: The wand chooses the wizard. You can't make people like you. You just have to wait for hating you to bore them.",
+      "expected_quotes": [
+        "The wand chooses the wizard.",
+        "You can't make people like you. You just have to wait for hating you to bore them."
+      ]
+    },
+    {
+      "id": "cross_source-166",
+      "result_type": "cross_source",
+      "text": "Small objects, big dread: It is a strange fate that we should suffer so much fear and doubt over so small a thing. Otherwise, you are just an inert chunk of randomly assembled molecules, drifting wherever the universe blows you.",
+      "expected_quotes": [
+        "It is a strange fate that we should suffer so much fear and doubt over so small a thing.",
+        "Otherwise, you are just an inert chunk of randomly assembled molecules, drifting wherever the universe blows you."
+      ]
+    },
+    {
+      "id": "cross_source-167",
+      "result_type": "cross_source",
+      "text": "Standing together in bad systems: A day may come when the courage of men fails, when we forsake our friends and break all bonds of fellowship, but it is not this day. Morty, You're right. Town is bad. But that doesn't mean that we have to be.",
+      "expected_quotes": [
+        "A day may come when the courage of men fails, when we forsake our friends and break all bonds of fellowship, but it is not this day.",
+        "Morty, You're right. Town is bad. But that doesn't mean that we have to be."
+      ]
+    },
+    {
+      "id": "cross_source-168",
+      "result_type": "cross_source",
+      "text": "Catchphrase surprise chain: Ooooh wee! Always a total surprise.",
+      "expected_quotes": [
+        "Ooooh wee!",
+        "Always a total surprise."
+      ]
+    },
+    {
+      "id": "no_hit-169",
+      "result_type": "no_hit",
+      "text": "Can you pick up milk on your way home?",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-170",
+      "result_type": "no_hit",
+      "text": "The bus was twenty minutes late again.",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-171",
+      "result_type": "no_hit",
+      "text": "I'll review your draft after lunch.",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-172",
+      "result_type": "no_hit",
+      "text": "今天下班一起去吃火锅吗？",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-173",
+      "result_type": "no_hit",
+      "text": "Meeting moved to Thursday at three.",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-174",
+      "result_type": "no_hit",
+      "text": "My phone battery dies by noon every day.",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-175",
+      "result_type": "no_hit",
+      "text": "The printer jammed on page four.",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-176",
+      "result_type": "no_hit",
+      "text": "Do we still need extra chairs for the workshop?",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-177",
+      "result_type": "no_hit",
+      "text": "I forgot my umbrella on the train.",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-178",
+      "result_type": "no_hit",
+      "text": "Let's split the taxi fare evenly.",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-179",
+      "result_type": "no_hit",
+      "text": "The pharmacy closes at eight tonight.",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-180",
+      "result_type": "no_hit",
+      "text": "Can you send the Zoom link again?",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-181",
+      "result_type": "no_hit",
+      "text": "Her cat knocked the plant off the shelf.",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-182",
+      "result_type": "no_hit",
+      "text": "I'm trying a new recipe for pasta tonight.",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-183",
+      "result_type": "no_hit",
+      "text": "Traffic on the expressway was awful.",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-184",
+      "result_type": "no_hit",
+      "text": "Please mute when you're not speaking.",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-185",
+      "result_type": "no_hit",
+      "text": "The museum ticket is valid for two days.",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-186",
+      "result_type": "no_hit",
+      "text": "I need to renew my library card.",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-187",
+      "result_type": "no_hit",
+      "text": "We should book flights before prices rise.",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-188",
+      "result_type": "no_hit",
+      "text": "The Wi-Fi password is on the fridge note.",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-189",
+      "result_type": "no_hit",
+      "text": "Coffee machine needs descaling again.",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-190",
+      "result_type": "no_hit",
+      "text": "Is the gym open on public holidays?",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-191",
+      "result_type": "no_hit",
+      "text": "I'll take the night shift if you cover Saturday.",
+      "expected_quotes": []
+    },
+    {
+      "id": "no_hit-192",
+      "result_type": "no_hit",
+      "text": "The package arrived but the box was dented.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-193",
+      "result_type": "near_miss",
+      "text": "I love my friends so much it hurts sometimes.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-194",
+      "result_type": "near_miss",
+      "text": "I'll just watch TV and call it a night.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-195",
+      "result_type": "near_miss",
+      "text": "Homework can wait until Sunday.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-196",
+      "result_type": "near_miss",
+      "text": "Friendship matters more than being right online.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-197",
+      "result_type": "near_miss",
+      "text": "You shall not open my snack drawer.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-198",
+      "result_type": "near_miss",
+      "text": "Five more minutes and I'll leave.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-199",
+      "result_type": "near_miss",
+      "text": "The universe is really, really big.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-200",
+      "result_type": "near_miss",
+      "text": "Parents are exhausted this week.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-201",
+      "result_type": "near_miss",
+      "text": "I trusted him with the keys once.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-202",
+      "result_type": "near_miss",
+      "text": "Always a surprise when the bus shows up.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-203",
+      "result_type": "near_miss",
+      "text": "I fear the dentist more than anything.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-204",
+      "result_type": "near_miss",
+      "text": "There are more important things than this spreadsheet.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-205",
+      "result_type": "near_miss",
+      "text": "Fame on social media fades fast anyway.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-206",
+      "result_type": "near_miss",
+      "text": "Life feels like one long risk assessment lately.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-207",
+      "result_type": "near_miss",
+      "text": "A wizard hat would look ridiculous on me.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-208",
+      "result_type": "near_miss",
+      "text": "The ring on her finger is white gold.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-209",
+      "result_type": "near_miss",
+      "text": "Death metal is too loud for studying.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-210",
+      "result_type": "near_miss",
+      "text": "Stay with the group at the airport gate.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-211",
+      "result_type": "near_miss",
+      "text": "Courage helps in interviews, I guess.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-212",
+      "result_type": "near_miss",
+      "text": "The government form has three pages, not four.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-213",
+      "result_type": "near_miss",
+      "text": "School traditions include a spring picnic.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-214",
+      "result_type": "near_miss",
+      "text": "My dog likes sunbeams on the couch.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-215",
+      "result_type": "near_miss",
+      "text": "Graduation speeches run too long every year.",
+      "expected_quotes": []
+    },
+    {
+      "id": "near_miss-216",
+      "result_type": "near_miss",
+      "text": "The future course catalog posted this morning.",
+      "expected_quotes": []
+    }
+  ]
+}

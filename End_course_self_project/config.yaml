@@ -1,0 +1,21 @@
+model: openai/gpt-4o-mini
+alternate_models:
+  - openai/gpt-4o-mini
+  - qwen/qwen-2.5-7b-instruct
+temperature: 0.0
+max_new_tokens: 900
+knowledge_dir: Knowledge_base
+retrieval:
+  method: fuzzy  # fuzzy | tfidf | embedding
+  limit: 5
+agent:
+  max_steps: 3
+  timeout_seconds: 60
+pricing_per_1m_tokens:
+  openai/gpt-4o-mini:
+    input: 0.15
+    output: 0.60
+  qwen/qwen-2.5-7b-instruct:
+    input: 0.05
+    output: 0.10
+prompt_version: v2-structured

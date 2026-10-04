@@ -1,0 +1,5 @@
+openai
+pydantic
+scikit-learn
+numpy
+PyYAML
